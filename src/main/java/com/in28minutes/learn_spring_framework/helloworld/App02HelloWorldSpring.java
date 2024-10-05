@@ -1,4 +1,6 @@
-package com.in28minutes.learn_spring_framework;
+package com.in28minutes.learn_spring_framework.helloworld;
+
+import java.util.Arrays;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -17,8 +19,10 @@ public class App02HelloWorldSpring {
 		System.out.println(applicationContext.getBean("person"));
 		System.out.println(applicationContext.getBean("person2MethodCall"));
 		System.out.println(applicationContext.getBean("person3Parameters"));
-		System.out.println(applicationContext.getBean("address2"));
-		// System.out.println(applicationContext.getBean(Address.class));
+		// System.out.println(applicationContext.getBean("address2"));
+		System.out.printf("Person 5 Qualifier %s%n", applicationContext.getBean("person5Qualifier"));
+		System.out.println(applicationContext.getBean(Address.class));
+		// Arrays.stream(applicationContext.getBeanDefinitionNames()).forEach(System.out::println);
 		
 	}
 

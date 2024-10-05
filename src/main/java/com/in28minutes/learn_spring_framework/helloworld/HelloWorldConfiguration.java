@@ -1,7 +1,9 @@
-package com.in28minutes.learn_spring_framework;
+package com.in28minutes.learn_spring_framework.helloworld;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 
 // @Configuration is a marker annotation that tells Spring that this is a configuration class
@@ -39,11 +41,24 @@ public class HelloWorldConfiguration {
         return new Person(name, age, address3);
     }
 
+    @Bean
+    @Primary
+    public Person person4Parameters(String name, int age, @Qualifier("address2Qualifier") Address address) {
+        return new Person(name, age, address());
+    }
+    @Bean
+    public Person person5Qualifier(String name, int age, Address address) {
+        return new Person(name, age, address());
+    }
+
     @Bean(name = "address2")
+    @Primary
     public Address address() {
         return new Address("Gotham", "USA");
     }
+
     @Bean(name = "address3")
+    @Qualifier("address2Qualifier")
     public Address address3() {
         return new Address("The Hood", "Bompton");
     }
