@@ -2,6 +2,11 @@ package com.in28minutes.learn_spring_framework.game;
 
 public class MarioGame implements GamingConsole{
 	
+	public MarioGame() {
+        System.out.println("MARIO GAME");
+    }
+	
+	
 	public void up() {
 		System.out.println("Jump");
 	}
