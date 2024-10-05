@@ -8,8 +8,10 @@ public class App02HelloWorldSpring {
 
 	public static void main(String[] args) {
 		//1: Launch the Spring Application Context
-		AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(HelloWorldConfiguration.class);
-		//2: Configure the things we want spring to manage - @Configuration
+
+		try (AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(
+				HelloWorldConfiguration.class)) {
+			//2: Configure the things we want spring to manage - @Configuration
 		//HelloWorldConfiguration is a configuration class -@Configuration
 		//name - @Bean
 
@@ -22,7 +24,8 @@ public class App02HelloWorldSpring {
 		// System.out.println(applicationContext.getBean("address2"));
 		System.out.printf("Person 5 Qualifier %s%n", applicationContext.getBean("person5Qualifier"));
 		System.out.println(applicationContext.getBean(Address.class));
-		// Arrays.stream(applicationContext.getBeanDefinitionNames()).forEach(System.out::println);
+		// Arrays.stream(applicationContext.getBeanDefinitionNames()).forEach(System.out::println);	
+		}
 		
 	}
 

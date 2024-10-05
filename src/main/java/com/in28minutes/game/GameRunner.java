@@ -10,7 +10,7 @@ public class GameRunner {
 
 	public void run() {
 		// TODO Auto-generated method stub
-		System.out.println("Running game: " + game);
+		System.out.println("Running game: %s" + game);
 		game.up();
 		game.down();
 		game.left();
