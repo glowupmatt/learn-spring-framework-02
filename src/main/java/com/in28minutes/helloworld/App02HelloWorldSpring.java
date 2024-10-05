@@ -1,4 +1,4 @@
-package com.in28minutes.learn_spring_framework.helloworld;
+package com.in28minutes.helloworld;
 
 import java.util.Arrays;
 

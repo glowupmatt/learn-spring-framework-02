@@ -1,10 +1,8 @@
 package com.in28minutes.learn_spring_framework;
 
-import com.in28minutes.learn_spring_framework.game.GameRunner;
-import com.in28minutes.learn_spring_framework.game.GamingConsole;
-import com.in28minutes.learn_spring_framework.game.PacManGame;
-// import com.in28minutes.learn_spring_framework.game.MarioGame;
-// import com.in28minutes.learn_spring_framework.game.SuperContraGame;
+import com.in28minutes.game.GameRunner;
+import com.in28minutes.game.GamingConsole;
+import com.in28minutes.game.PacManGame;
 
 public class App01GamingBasicJava {
 
