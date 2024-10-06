@@ -40,7 +40,7 @@ public class LazyInitializationLauncher {
 public static void main(String[] args) {
 	try (AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(
 			LazyInitializationLauncher.class)) {
-		System.out.println("Init of context is completed: ");
+				System.out.println("Init of context is completed: ");
 				context.getBean(ClassB.class).doSomething();;
 		
 	}
