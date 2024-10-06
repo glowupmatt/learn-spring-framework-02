@@ -4,11 +4,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class PacManGame implements GamingConsole {
-	
-	public PacManGame() {
-        System.out.println("PAC MAN GAME");
-    }
-	
 
 	public void up() {
 		System.out.println("Up");

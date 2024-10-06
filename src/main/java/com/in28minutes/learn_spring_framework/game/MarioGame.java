@@ -7,11 +7,6 @@ import org.springframework.stereotype.Component;
 @Primary
 public class MarioGame implements GamingConsole{
 	
-	public MarioGame() {
-        System.out.println("MARIO GAME");
-    }
-	
-	
 	public void up() {
 		System.out.println("Jump");
 	}
