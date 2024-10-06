@@ -34,11 +34,9 @@ class YourBusinessClass {
 
 @Component
 class Dependency1 {
-
 }
 @Component
-class Dependency2 {
-	
+class Dependency2 {	
 }
 
 
